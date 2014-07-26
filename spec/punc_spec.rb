@@ -2,7 +2,7 @@ require 'rspec'
 require 'punc'
 
 describe Punc do
-  it "can return true with a single pair of punctuation characters are closed" do
+  it "can return true when a single pair of punctuation characters are closed" do
     input = Punc.new
     expect(input.closed?"[]").to eq(true)
   end
@@ -10,7 +10,7 @@ describe Punc do
     input = Punc.new
     expect(input.closed?"[]{").to eq(false)
   end
-  it "can return true when multiple punctuation characters are given out of order" do
+  it "can return false when multiple punctuation characters are not closed" do
   input = Punc.new
   expect(input.closed?("[(]){{{{{{{}}}}}}[[])")).to eq(false)
 
