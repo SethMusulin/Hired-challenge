@@ -1,6 +1,5 @@
 class Punc
 
-
   def closed?(input)
     return false if input.length.odd?
     open = "([{"
